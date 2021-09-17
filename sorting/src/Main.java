@@ -10,6 +10,10 @@ public class Main {
         //This is the array sorted in ascending order
         int[] sorted2 = InsertionSort(unsorted);
         System.out.println(Arrays.toString(sorted2));
+
+        //This is the array sorted in descending order
+        int[] descending = reverse(sorted2);
+        System.out.println(Arrays.toString(descending));
     }
 
     //this is for insertion sort
@@ -22,6 +26,18 @@ public class Main {
                 pos--;
             }
             arr[pos] = k;
+        }
+        return arr;
+    }
+
+    //this is for reversing the sorted array
+    public static int[] reverse(int[] arr) {
+        int j = arr.length-1;
+        int x = arr.length/2;
+        for (int i = 0; i < x; i++) {
+            int temp = arr[i];
+            arr[i] = arr[j - i];
+            arr[j - i] = temp;
         }
         return arr;
     }
