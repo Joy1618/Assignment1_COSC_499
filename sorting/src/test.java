@@ -4,6 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 
 public class test extends Main{
 
+//tests passed
+
     //unsorted array of integers
     int[] unsorted = {2,1,4,3};
 
